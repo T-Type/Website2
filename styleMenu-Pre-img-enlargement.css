@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/*NAVBAR*/
+.navbar {
+display: flex;
+font-family: 'Indie Flower', sans-serif;
+border: 1px solid rgb(30, 255, 0);
+margin: 0 auto;
+max-width: 1200px;
+
+}
+
+.navbar li {
+border: 1px dashed red;
+display: inline-flex;
+font-weight: bold;
+font-size: 2vw;
+margin-right: auto;
+
+}
+
+.navbar ul {
+border: 1px solid blue;
+align-self:flex-end;
+margin-bottom: 0px;
+}
+
+.navbar h1 {
+border: 1px solid red;
+margin-right: auto;
+text-align: left;
+font-size: 3vw;
+margin-bottom: 0px;
+}
+
+/*MENU TITLE*/
+.menuTitle {
+    border: 1px solid rgb(0, 159, 199);
+    border-bottom: 2px dashed black;
+    text-align: center;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 2em;
+
+}
+
+/*MENU NAVIGATION*/
+.menuNav {
+    border: 1px dashed blue;
+}
+
+.menuNav ul {
+    display: inline-flex;
+}
+
+.menuNav li {
+    border: 1px solid rgb(255, 0, 43);
+    list-style-type: none;
+    
+}
+
+/*Item Grid Setup*/
+.starters li, .entrees-rice li, .entrees-noodles li {
+    border: 1px solid black;
+    list-style-type: none;
+    margin: 0 auto;
+    display: grid;
+    width: 1000px;
+    height: 150px;
+    grid-template-columns: 210px 1fr;
+    grid-template-rows: 40px 1fr;
+    grid-template-areas: "pic title"
+                         "pic description"; 
+}
+
+/*ALL IMAGES*/
+li > img {
+    height: 150px;
+    width: 210px;
+    grid-area: "pic";
+    object-fit: cover;
+}
+
+/*Menu item titles and descriptions*/
+li > p {
+    grid-area: 2 / 2 / span 1 / span 2;
+    font-size: 1.25em;}
+h3, p {
+    padding-left: 10px;}
+li > h3 {
+    grid-area: "title";
+    font-size: 1.75em;}
+li > h3:after { 
+    /*This is the underline*/
+    border-bottom: 2px solid grey;
+    content: "";
+    display: block;
+    width: 175px;}
+
+
+/*-------------STARTERS START------------*/
+/*temp out.starters {
+    border: 1px solid rgb(255, 0, 0);
+    display: grid;
+    grid-template-rows: minmax(50px 500px);
+    margin: 0 auto;
+    width: 1000px;}
+*/
+
+/*STARTERS TITLE*/
+#starters {
+    font-size: 2em; 
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 10px 0px;
+    background-color:rgb(248, 212, 212);}
+/*Starters border - work in progress
+#starters:after {}
+#starters:before {}
+/*
+/*-------------STARTERS END------------*/
+
+/*ENTREES-RICE START*/
+#entrees-rice {
+    font-size: 2em;
+    text-align: center;
+    background-color: rgb(153, 248, 140);
+    padding: 10px 0px;
+}
+/*ENTREES-RICE END*/
+
+
+/*ENTREES-NOODLES START*/
+#entrees-noodles {
+    font-size: 2em;
+    text-align: center;
+    background-color: rgb(246, 248, 140);
+    padding: 10px 0px;
+}
+/*ENTREES-NOODLES END*/
